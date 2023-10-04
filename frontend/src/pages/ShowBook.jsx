@@ -20,35 +20,35 @@ const ShowBook = () => {
         })
     }, [])
     return (
-        <div className="p-4">
+        <div className="m-6">
             <BackButton />
-            <h1 className="text-3xl my-4">Show Book</h1>
+            <h1 className="text-2xl text-center my-4">Show Book</h1>
             {isLoading ? (
                 <Spinner />
-            ): (
-              <div className="flex flex-col border-2 border-sky-400 rounded-xl w-fit p-4">
-                <div className="my-4">
-                    <span className="text-xl mr-4 text-gray-500">ID</span>
+            ) : (
+              <div className="flex flex-col border-2 border-sky-800 rounded-lg w-fit p-6 mx-auto">
+                <div className="my-2">
+                    <span className="text-lg mr-4 text-gray-500">ID</span>
                     <span>{book._id}</span>
                 </div>
-                <div className="my-4">
-                    <span className="text-xl mr-4 text-gray-500">Title</span>
+                <div className="my-2">
+                    <span className="text-lg mr-4 text-gray-500">Title</span>
                     <span>{book.title}</span>
                 </div>
-                <div className="my-4">
-                    <span className="text-xl mr-4 text-gray-500">Author</span>
+                <div className="my-2">
+                    <span className="text-lg mr-4 text-gray-500">Author</span>
                     <span>{book.author}</span>
                 </div>
-                <div className="my-4">
-                    <span className="text-xl mr-4 text-gray-500">Publish Year</span>
+                <div className="my-2">
+                    <span className="text-lg mr-4 text-gray-500">Publish Year</span>
                     <span>{book.publishYear}</span>
                 </div>
-                <div className="my-4">
-                    <span className="text-xl mr-4 text-gray-500">Created At</span>
+                <div className="my-2">
+                    <span className="text-lg mr-4 text-gray-500">Created At</span>
                     <span>{new Date(book.createdAt).toLocaleString()}</span>
                 </div>
-                <div className="my-4">
-                    <span className="text-xl mr-4 text-gray-500">Updated At</span>
+                <div className="my-2">
+                    <span className="text-lg mr-4 text-gray-500">Updated At</span>
                     <span>{new Date(book.updatedAt).toLocaleString()}</span>
                 </div>
               </div>
