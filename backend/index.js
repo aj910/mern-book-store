@@ -1,19 +1,22 @@
 import express, { request } from "express";
 import { PORT, mongoDBURL } from "../backend/config.js";
 import mongoose from "mongoose";
-import { Book } from "./models/bookModel.js";
 import bookRoute from "./routes/bookRoute.js"
+import cors from "cors"
 
 const app = express();
 
-app.use(express.json())
+app.use(express.json());
+
+// handling cors policy with middleware
+app.use(cors());
 
 app.get('/', (request, response) => {
     console.log(request);
     return response.status(234).send("Welcome to mern book store app!")
 })
 
-app.use('/books', bookRoute)
+app.use('/books', bookRoute);
 
 
 const connectWithRetry = () => {
