@@ -33,10 +33,8 @@ const DeleteBook = () => {
             <div className="flex flex-col border-4 border-sky-400 rounded-xl w-[600px] p-4 mx-auto">
                <h3 className="text-xl text-center">Are you sure you want to delete this book?</h3>
                     <button onClick={handleDeleteBook} className="p-3 w-[200px] rounded-lg mx-auto bg-sky-300 m-4">Delete</button>
-                    <button onClick={() => navigate('/')} className="p-3 w-[200px] rounded-lg mx-auto bg-sky-300 m-2">Cancel</button>
+                    <button onClick={() => navigate("/")} className="p-3 w-[200px] rounded-lg mx-auto bg-sky-300 m-2">Cancel</button>
             </div>
-           
-            
         </div>
     )
 }
