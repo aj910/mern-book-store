@@ -46,7 +46,6 @@ const EditBook = () => {
             setIsLoading(false);
             enqueueSnackbar('Book Edited Successfully', { variant: 'success' });
             navigate('/');
-            // document.getElementById('bookForm').reset();
         })
             .catch((error) => {
                 setIsLoading(false);
