@@ -22,7 +22,7 @@ const ShowBook = () => {
     return (
         <div className="m-6">
             <BackButton />
-            <h1 className="text-2xl text-center my-4">Show Book</h1>
+            <h1 className="text-2xl text-center my-4">Show Book Details</h1>
             {isLoading ? (
                 <Spinner />
             ) : (

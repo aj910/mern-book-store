@@ -55,7 +55,10 @@ const CreateBook = () => {
                 </div>
                 <div className="my-4">
                     <label className="text-lg mr-4 text-gray-500">Publish Year</label>
-                    <input type="number" min="1000" max={currentYear} value={publishYear} className="border-2 border-gray-500 px-4 py-2 w-full" onChange={(e) => setPublishYear(e.target.value)} />
+                    <input type="number" min="1000" max={currentYear} value={publishYear} className="border-2 border-gray-500 px-4 py-2 w-full" onChange={(e) => {
+                        setPublishYear(e.target.value);
+                        setError('')
+                    }} />
                     <div className="text-md text-red-500">{error}</div>
                 </div>
                     <button onClick={handleSaveBook} className="p-3 w-[250px] rounded-lg mx-auto bg-sky-300 m-5">Save</button>
