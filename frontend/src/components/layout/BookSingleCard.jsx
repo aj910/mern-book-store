@@ -13,7 +13,6 @@ const BookSingleCard = ({book}) => {
     return (
         <div className="border-4 border-gray-500 rounded-lg px-4 py-2 m-4 relative hover:shadow-lg">
            <h2 className="absolute top-2 right-2 px-4 py-1 bg-red-300 rounded-lg">{book.publishYear}</h2>
-           {/* <h4 className="my-2 text-gray-500">{book._id}</h4> */}
            <div className="flex justify-start items-center gap-x-2">
              <PiBookOpen className="text-red-300 text-xl" />
              <h2 className="my-1">{book.title}</h2>

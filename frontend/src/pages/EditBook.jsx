@@ -31,15 +31,15 @@ const EditBook = () => {
     }, [id])
 
     const handleEditBook = () => {
-        const vaildYear = parseInt(publishYear)
-        if (isNaN(vaildYear) || vaildYear < 1000 || vaildYear > currentYear) {
+        const validYear = parseInt(publishYear)
+        if (isNaN(validYear) || validYear < 1000 || validYear > currentYear) {
           setError('Please enter a valid year!');
           return;
         }
         const data = {
             title,
             author,
-            publishYear: vaildYear,
+            publishYear: validYear,
         };
         setIsLoading(true);
         axios.put(`http://localhost:5555/books/${id}`, data).then(() => {
@@ -76,7 +76,7 @@ const EditBook = () => {
                         }} />
                     <div className="text-md text-red-500">{error}</div>
                 </div>
-                    <button onClick={handleEditBook} className="p-3 w-[250px] rounded-lg mx-auto bg-sky-300 m-5">Save</button>
+                    <button onClick={handleEditBook} className="p-3 w-[250px] rounded-lg mx-auto bg-sky-400 m-5">Save</button>
             </div>
            
             

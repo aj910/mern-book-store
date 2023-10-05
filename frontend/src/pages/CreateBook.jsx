@@ -30,7 +30,6 @@ const CreateBook = () => {
             setIsLoading(false);
             enqueueSnackbar('Book created successfully', { variant: 'success' });
             navigate('/');
-            document.getElementById('bookForm').reset();
         })
             .catch((error) => {
                 setIsLoading(false);
@@ -43,7 +42,7 @@ const CreateBook = () => {
             <BackButton />
             <h1 className="text-2xl text-center my-4">Create Book</h1>
             {isloading ? <Spinner /> : ''}
-            <form id="bookForm">
+          
             <div className="flex flex-col border-4 border-sky-400 rounded-xl w-[600px] p-4 mx-auto">
                 <div className="my-4">
                     <label className="text-lg mr-4 text-gray-500">Title</label>
@@ -61,9 +60,9 @@ const CreateBook = () => {
                     }} />
                     <div className="text-md text-red-500">{error}</div>
                 </div>
-                    <button onClick={handleSaveBook} className="p-3 w-[250px] rounded-lg mx-auto bg-sky-300 m-5">Save</button>
+                    <button onClick={handleSaveBook} className="p-3 w-[250px] rounded-lg mx-auto bg-sky-400 m-5">Save</button>
             </div>
-            </form>
+       
             
         </div>
     )
