@@ -1,6 +1,5 @@
 {
   "name": "frontend",
-  "homepage": "https://aj910.github.io/mern-book-store",
   "private": true,
   "version": "0.0.0",
   "type": "module",
