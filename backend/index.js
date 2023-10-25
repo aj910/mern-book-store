@@ -1,5 +1,5 @@
 import express, { request } from "express";
-import { PORT, mongoDBURL } from "../backend/config.js";
+import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
 import bookRoute from "./routes/bookRoute.js"
 import cors from "cors"
